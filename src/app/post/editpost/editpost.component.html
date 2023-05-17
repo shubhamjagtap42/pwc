@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="main">
+    <form [formGroup]="postForm" (ngSubmit)="onUpdate()">
+      <h3 style="text-align: center">Edit Post</h3>
+      <hr />
+
+      <div class="first">
+        <label for="float-input" style="margin-left: 483px">product</label>
+        <input
+          id="float-input"
+          type="text"
+          class="form-control"
+          style="margin-left: 40px"
+          formControlName="product"
+          pInputText
+          required
+        />
+
+        <div *ngIf="postForm.get('product')?.hasError?.('minlength')">
+          name contain only 6 character
+        </div>
+        <div *ngIf="postForm.get('product')?.hasError?.('required')">
+          product is required
+        </div>
+        <br />
+        <div class="second">
+          <label for="float-input" style="margin-left: 483px"
+            >Description</label
+          >
+          <span>
+            <textarea
+              rows="5"
+              cols="30"
+              style="margin-left: 483px"
+              class="form-control"
+              formControlName="discription"
+              pInputTextarea
+              placeholder="Description"
+            ></textarea>
+            <div *ngIf="postForm.get('discription')?.hasError?.('minlength')">
+              <span class="red">Description contain only 20 character</span> 
+            </div>
+            <div *ngIf="postForm.get('discription')?.hasError?.('required')">
+            <span class="red">Description is required</span>             
+           </div>
+          </span>
+        </div>
+
+        <br />
+        <div class="third" style="margin-left: 483px">
+          <button
+            pButton
+            pRipple
+            type="submit"
+            label="UPDATEPOST"
+            (click)="tablehi()"
+            class="p-button-outlined p-button-help"
+          ></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

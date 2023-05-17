@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="main">
+    <h1>post list</h1>
+
+    <button
+        pButton
+        pRipple
+        type="button"
+        label="show table"
+        (click)="showtable()"
+        routerLink="/post"
+        class="p-button-text p-button-plain"
+      ></button>
+
+    <div class="navbar" style="margin-left: 80%;">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Add Post"
+        (click)="hidetable()"
+        [routerLink]="['/post/addpost']"
+        class="p-button-text p-button-plain"
+      ></button>
+    </div>
+
+    <div *ngIf="ishide">
+
+        
+        <p-table
+        [value]="(posts$ | async)!"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-post>
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.product }}</td>
+                <td>{{ post.description }}</td>
+                <td>
+                  <button
+                  pButton
+                  pRipple
+                  type="button"
+                  label="UPDATE"
+                  (click)="tablehide()"
+                  [routerLink]="['edit',post.id]"
+                  class="p-button-text p-button-warning"
+                ></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+</div>

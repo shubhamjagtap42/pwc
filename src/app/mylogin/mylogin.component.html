@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="main">
+    <form (ngSubmit)="onSubmit()" style="text-align: center" >
+      <label>UserName</label>
+      <input type="text" pInputText [(ngModel)]="username" name="username" />
+
+      <br />
+      <br />
+      <label>PassWord</label>
+      <input type="password" pInputText [(ngModel)]="password" name="password" />
+
+      <br>
+      <br>
+
+      <button
+        pButton
+        pRipple
+        type="submit"
+        label="Submit"
+        class="p-button-raised p-button-help"
+      ></button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.main{
+    position: inherit;
+    display:contents ;
+}
+
+.first
+{
+    justify-content: space-between;
+}
+.second{
+    margin-top: 20px;
+}
+.third
+{
+     margin-top: 20px;
+    margin-left: 30px;
+}

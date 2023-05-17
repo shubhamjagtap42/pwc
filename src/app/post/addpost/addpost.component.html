@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="first">
+
+    <h3 style="text-align: center;">Add Post</h3>
+    <hr>
+    <form [formGroup]="postForm" (ngSubmit)="onAddpost()">
+      <span class="p-float-label" style="margin-left: 39%">
+        <input
+          id="float-input"
+          style="margin-right: 83%"
+          type="text"
+          class="form-control"
+          formControlName="product"
+          pInputText
+          required=""
+        />
+        <label for="float-input">product</label>
+      </span>
+
+
+      <div class="colourchange"
+            style="color: red"
+            *ngIf="
+              postForm.controls['product'].invalid &&
+              postForm.controls['product'].touched  
+            "
+          >
+          
+            Title Is Required.
+
+          </div>
+            <br />
+      <div class="second">
+        <textarea
+          rows="5"
+          cols="30"
+          style="margin-left: 483px"
+          pInputTextarea
+          placeholder="Description"
+          class="form-control"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      <div class="colourchange"
+            style="color: red"
+            *ngIf="
+              postForm.controls['description'].invalid &&
+              postForm.controls['description'].touched
+            "
+          >
+            You Should Write A Description
+          </div>
+   <br>
+      <div class="third" style="margin-left: 483px;">   
+        <button
+          pButton
+          pRipple
+          type="submit"
+          label="ADD POST"
+          [disabled]="!postForm.valid"
+          class="p-button-outlined p-button-help"
+        ></button>
+      </div>
+    </form>
+  </div>
+</div>

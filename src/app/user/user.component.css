@@ -1,0 +1,62 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+
+.navbar{
+    height: 60px;
+    background-color: rgba(252, 228, 218, 0.836);
+    padding: 10px;
+    margin-left: -7px;
+    margin-top: -8px;
+    margin-right: -10px;
+    
+}
+b i{
+    margin-right: 89%;
+    font-size: xx-large;
+    
+    
+}
+.sidenav{
+    height: 841px;
+    width: 70px;
+    background-color: rgba(252, 228, 218, 0.836);
+    margin-left: -7px;
+
+}
+.upload
+{
+    
+    text-align: center;
+    margin-left:10%;
+    /* width: 100px; */
+}
+.padding
+{
+    
+    margin-top: 20%;
+    /* width: 100%; */
+}
+.fileupload{
+    display:contents;
+   
+}
+.filedownload{
+    margin-top: 5%;
+}
+
+.p-button.p-button-help{
+    justify-content: space-between;
+    margin-left: 27px;
+}
+.content{
+    text-align: center;
+    align-items: center;
+}
+.p-card{
+    margin-left: 10%;
+}

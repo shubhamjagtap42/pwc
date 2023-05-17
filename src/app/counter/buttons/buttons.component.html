@@ -1,0 +1,27 @@
+<div class="container" *ngIf="isshow;">
+    <button
+    pButton
+    pRipple
+    type="button"
+    label="Increament"
+    (click)="onincreament()"
+    class="p-button-raised p-button-success"
+    ></button> &nbsp;
+    <button
+    pButton
+    pRipple
+    type="button"
+    label="Decreament"
+    (click)="ondecreament()"
+    class="p-button-raised p-button-danger"
+    ></button>  &nbsp;
+    <button
+    pButton
+    pRipple
+    type="button"
+    label="Reset"
+    (click)="onreset()"
+    class="p-button-raised p-button-info"
+    ></button> 
+</div>
+    

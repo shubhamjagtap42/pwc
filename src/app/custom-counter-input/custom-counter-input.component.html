@@ -1,0 +1,73 @@
+<div class="first">
+    
+    <h2>Welcome To The NGRX</h2>
+
+    <label for="float-input">First No</label>
+    <span class="p-float-label">
+        <input
+        type="text"
+        pInputText
+        placeholder="Enter A Value"
+        [(ngModel)]="value"
+        />
+        </span>
+        &nbsp;
+        <br>
+        <button
+        pButton
+        pRipple
+        type="button"
+        label="Add A Counter"
+        (click)="onAdd()"
+        class="p-button-raised p-button-warning"
+        ></button>
+</div>
+<br>
+<br>
+<div class="second">
+    
+
+    <label for="float-input">Second No</label>
+    <span class="p-float-label">
+        <input
+        type="text"
+        pInputText
+        placeholder="Enter A Value"
+        [(ngModel)]="value1"
+        />
+        </span>
+        &nbsp;
+        <br>
+        <button
+        pButton
+        pRipple
+        type="button"
+        label="Sub A Counter"
+        (click)="onsubstract()"
+        class="p-button-raised p-button-danger"
+        ></button>
+
+        <br>
+        <br>
+            <hr>
+
+        <div class="third">
+           <b style="font-size: large;">
+               
+          {{(channelname$ | async)}}
+           </b> 
+
+        </div>
+        <hr>
+         <br>
+        <div class="fourth">
+            <button
+            pButton
+            pRipple
+            type="button"
+            label="Change Text"
+            (click)="onchangechannel()"
+            class="p-button-raised p-button-danger"
+            ></button>
+        </div>
+</div>
